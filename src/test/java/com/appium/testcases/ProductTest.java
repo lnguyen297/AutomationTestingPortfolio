@@ -16,7 +16,7 @@ public class ProductTest extends BaseTest {
     @Test
     public void testAddNewProduct() {
         loginPage = new LoginPage();
-        loginPage.login("admin", "admin");
+        //productPage = loginPage.login("admin", "admin");
 
         configPage = new ConfigPage();
         productPage = configPage.openProductManagement();

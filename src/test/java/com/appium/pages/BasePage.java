@@ -1,6 +1,7 @@
 package com.appium.pages;
 
 import com.appium.drivers.DriverManager;
+import com.appium.keywords.MobileUI;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
@@ -66,7 +67,7 @@ public class BasePage {
     }
 
     public ConfigPage clickMenuConfig() {
-        menuConfig.click();
+        MobileUI.clickElement(menuConfig);
         return new ConfigPage();
     }
 

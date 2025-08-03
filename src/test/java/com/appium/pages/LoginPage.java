@@ -39,7 +39,6 @@ public class LoginPage extends BasePage {
         MobileUI.clickElement(passwordField); // Click vào password field
         MobileUI.setText(passwordField, password); // Nhập password
         MobileUI.clickElement(loginButton); // Click nút login
-
         return new MenuPage();
     }
 

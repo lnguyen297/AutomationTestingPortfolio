@@ -2,36 +2,20 @@
 
 <suite name="Suite Regression Test" verbose="1" parallel="tests">
 
-<!--    <test name="Platform Android Test 1 - Taurus App">-->
-<!--        <parameter name="platformName" value="Android"/>-->
-<!--        <parameter name="platformVersion" value="16"/>-->
-<!--        <parameter name="deviceName" value="Pixel_9_Pro_API_36"/>-->
-<!--        <parameter name="udid" value="emulator-5554"/>-->
-<!--        <parameter name="automationName" value="UiAutomator2"/>-->
-<!--        <parameter name="appPackage" value="com.anhtester.mobile_app.taurus"/>-->
-<!--        <parameter name="appActivity" value="com.anhtester.mobile_app.taurus.MainActivity"/>-->
-<!--        <parameter name="noReset" value="false"/>-->
-<!--        <parameter name="fullReset" value="false"/>-->
-<!--        <parameter name="autoGrantPermissions" value="true"/>-->
-<!--        <parameter name="host" value="127.0.0.1"/>-->
-<!--        <parameter name="port" value="8000"/>-->
-<!--        <parameter name="systemPort" value="8201"/>-->
-<!--        <classes>-->
-<!--            <class name="com.appium.testcases.LoginTest"/>-->
-<!--&lt;!&ndash;            <class name="com.appium.testcases.MenuTest"/>&ndash;&gt;-->
-<!--&lt;!&ndash;            <class name="com.appium.testcases.ProductTest"/>&ndash;&gt;-->
-<!--        </classes>-->
-<!--    </test>-->
+        <listeners>
+            <listener class-name="com.appium.listeners.TestListener"/>
+        </listeners>
 
     <test name="Platform Android Test - Taurus App">
         <parameter name="platformName" value="Android"/>
-        <parameter name="deviceName" value="pixel9"/>
+        <parameter name="deviceName" value="pixel8"/>
         <parameter name="udid" value="emulator-5554"/>
         <parameter name="host" value="127.0.0.1"/>
         <parameter name="port" value="8000"/>
         <parameter name="systemPort" value="8201"/>
         <classes>
             <class name="com.appium.testcases.LoginTest"/>
+            <class name="com.appium.testcases.ConfigTest"/>
         </classes>
     </test>
 
